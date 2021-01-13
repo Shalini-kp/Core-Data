@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rxR-ys-zvY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Master Data View Controller-->
+        <scene sceneID="qTc-oN-aPc">
+            <objects>
+                <viewController id="rxR-ys-zvY" customClass="MasterDataViewController" customModule="Core_Data_Framework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nff-sG-88R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yTm-sH-rMc">
+                                <rect key="frame" x="0.0" y="91" width="375" height="576"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="masterDataTableViewCellID" textLabel="4Xr-PG-fWy" rowHeight="60" style="IBUITableViewCellStyleDefault" id="HyQ-eK-jnt">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HyQ-eK-jnt" id="q9k-EN-mmg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Xr-PG-fWy">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="59.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                                    <color key="textColor" red="1" green="0.2170199438" blue="0.030903798569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="rxR-ys-zvY" id="FGM-lJ-VKf"/>
+                                    <outlet property="delegate" destination="rxR-ys-zvY" id="YkV-Jg-7JK"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Master Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIO-dd-ZKp">
+                                <rect key="frame" x="0.0" y="50" width="375" height="21"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="18"/>
+                                <color key="textColor" red="1" green="0.2170199438" blue="0.030903798569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AnV-NH-NPV" firstAttribute="trailing" secondItem="yTm-sH-rMc" secondAttribute="trailing" id="5o8-bV-Wf7"/>
+                            <constraint firstItem="yTm-sH-rMc" firstAttribute="top" secondItem="PIO-dd-ZKp" secondAttribute="bottom" constant="20" id="7on-sH-qWE"/>
+                            <constraint firstItem="PIO-dd-ZKp" firstAttribute="top" secondItem="AnV-NH-NPV" secondAttribute="top" constant="30" id="I2N-OH-rlT"/>
+                            <constraint firstItem="yTm-sH-rMc" firstAttribute="leading" secondItem="AnV-NH-NPV" secondAttribute="leading" id="JBV-WY-e8g"/>
+                            <constraint firstItem="AnV-NH-NPV" firstAttribute="bottom" secondItem="yTm-sH-rMc" secondAttribute="bottom" id="QQV-H8-x1p"/>
+                            <constraint firstItem="PIO-dd-ZKp" firstAttribute="leading" secondItem="AnV-NH-NPV" secondAttribute="leading" id="e3C-dv-AWW"/>
+                            <constraint firstItem="AnV-NH-NPV" firstAttribute="trailing" secondItem="PIO-dd-ZKp" secondAttribute="trailing" id="oaG-y9-y1y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AnV-NH-NPV"/>
+                    </view>
+                    <connections>
+                        <outlet property="masterDataTableView" destination="yTm-sH-rMc" id="p3U-vD-fkv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pMm-tt-82n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="185" y="36"/>
+        </scene>
+    </scenes>
+</document>
